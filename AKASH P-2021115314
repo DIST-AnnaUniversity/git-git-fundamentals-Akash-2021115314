@@ -1,0 +1,278 @@
+
+echo "akash ak"
+
+#echo command
+echo "I AM IT STUDENT FROM CEG"
+echo -n "OPERATING SYSTEM"
+echo -e "\n OOPS \t CA \t EVS \n"
+
+#add two number
+((sum=20+30))
+#print the result
+echo "sum="$sum
+
+#sub two number
+((sub=40-20))
+#print the result
+echo "sub="$sub
+
+#multiline command
+: '
+the follwing script
+the sqau#for loop
+for((number=8;number>1;number--))
+do
+echo -n "$number"
+done
+printf "\n"re value of the number
+'
+((area=10*10))
+echo $area
+
+
+#while loop
+valid=true
+count=0
+while [ $valid ]
+do 
+echo $count
+if [ $count -eq 10 ];
+then
+break
+fi
+((count++))
+done
+
+
+#get user input
+echo "enter your name="
+read name
+echo "enter your department ="
+read department
+echo "welcome $name in $department"
+Learning Laravel 5
+
+
+#if statement
+n=5
+if [ $n -lt 10 ];
+then
+echo "It is a one digit number"
+else
+echo "It is a two digit number"
+fi
+
+
+#using if statement with and logic
+echo "enter name="
+read name
+echo "enter password="
+read password
+if [[ ( $name == "akash" && $password == "password" ) ]];
+then
+echo "valid user"
+else "invalid"
+fi
+
+
+echo "Enter any "
+read n
+if [[ ( $n -eq 55 || $n  -eq 88 ) ]]
+then
+echo "You won the game"
+else
+echo "You lost the game"
+fi
+
+
+#using else if statement
+echo "Enter your mark"
+read n
+if [ $n -eq 100];
+then
+echo "You got 1st prize"
+elif [ $n -eq 95 ];
+then
+echo "You got 2nd prize"
+elif [ $n -eq 90];
+then
+echo "You got 3rd prize"
+else
+echo "Sorry, try for the next time"
+fi
+
+
+#using case statement
+echo "Enter your name="
+read n
+case $n in
+AKASH)
+echo echo "IT DEPARTMENT" ;;
+PUVI)
+echo "MECH DEPARTMENT" ;;
+BHARATH)
+echo "CIVIL DEPARTMENT" ;;
+*)
+echo "YOU ARE NOT IN DEPARTMENT" ;;
+esac
+
+
+
+echo "total arguments=$#"
+echo "1st argument = $1"
+echo "2nd argument = $2"
+
+
+for arg in "$@"
+do
+index=$(echo $arg | cut -f1 -d=)
+val=$(echo $arg | cut -f2 -d=)
+case $index in
+X) x=$val;;
+Y) y=$val;;
+*)
+esac
+done
+((result=x+y))
+echo "X+Y=$result"
+
+
+
+string1="akash"
+string2="puvi"
+echo "$string1$string2"
+string3=$string1+$string2
+string3+="\nis a best friends"
+echo $string3
+
+
+#get substring of strings
+Str="I'M akash from IT DEPARTMENT"
+subStr=${Str:4:5}
+echo $subStr
+
+#Add two numbers
+echo "Enter first number="
+read n
+echo "Enter second number="
+read m
+(( sum=n+m ))
+echo "The result of sum = $sum"
+
+
+#create function
+function ak()
+{
+echo 'I am a dancer'
+echo 'I am a coder'
+}
+ak
+
+
+#create function with parameters
+Rectangle_Area() {
+area=$(($1 * $2))
+echo "Area is : $area"
+}
+Rectangle_Area 30 20
+
+
+
+#PASS RETURN VALUE FROM FUNCTION
+function func() {
+str="HELLO, $name"
+echo $str
+}
+echo "Enter your name"
+read name
+val=$(func)
+echo "I  $val"
+
+
+#make directory
+echo "Enter directory name"
+read newdir
+`mkdir $newdir`
+
+
+echo "Enter directory name"
+read ndir
+if [ -d "$ndir" ]
+then
+echo "Directory exist"
+else
+`mkdir $ndir`
+echo "Directory created"
+fi
+
+
+#read a file
+file='bash7.sh'
+while read line; do
+echo $line
+done < $file
+
+
+
+#delete file
+echo "Enter filename to remove"
+read fn
+rm -i $fn
+
+
+#append to file
+echo "Before appending the file"
+cat bash7.sh
+echo "Learning Laravel 5">> bash7.sh
+echo "After appending the file"
+cat bash7.sh
+
+
+
+#test if file exit
+filename=$1
+if [ -f "$filename" ]; 
+then
+echo "File exists"
+else
+echo "File does not exist"
+fi
+
+
+#send mail
+Recipient=”akashpannneer2004@gmail.com.com”
+Subject=”operating system”
+Message=”Welcome to our site”
+`mail -s $Subject $Recipient <<< $Message
+
+
+
+#get parse current data;
+Year=`date +%Y`
+Month=`date +%m`
+Day=`date +%d`
+Hour=`date +%H`
+Minute=`date +%M`
+Second=`date +%S`
+echo `date`
+echo "Current Date is: $Day-$Month-$Year"
+echo "Current Time is: $Hour:$Minute:$Second"
+
+
+
+#wait command
+echo "Wait command" &
+process_id=$!
+wait $process_id
+echo "Exited with status $?"
+
+
+#sleep command
+echo "Wait for 3 seconds"
+sleep 3
+echo "Completed"
+
+
+
+
+
